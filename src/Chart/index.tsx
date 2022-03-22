@@ -38,7 +38,7 @@ const Chart: React.FC = () => {
     } else {
       zoomShow = false;
     }
-    let option = {
+    let option: ECOption = {
       backgroundColor: '#0D2753',
       tooltip: {
         trigger: 'axis',
@@ -49,7 +49,7 @@ const Chart: React.FC = () => {
       title: {
         text: '标题',
       },
-      legend: { show: true, data:['legend'] },
+      legend: { show: true, data: ['legend'] },
       grid: {
         top: '10%',
         right: '5%',
@@ -69,9 +69,7 @@ const Chart: React.FC = () => {
             interval: 0,
             margin: 10,
             color: '#05D5FF',
-            textStyle: {
-              fontSize: 11,
-            },
+            fontSize: 11,
             rotate: 45,
           },
           axisTick: {
@@ -86,9 +84,7 @@ const Chart: React.FC = () => {
             padding: [3, 0, 0, 0],
             formatter: '{value}',
             color: 'rgba(95, 187, 235, 1)',
-            textStyle: {
-              fontSize: 11,
-            },
+            fontSize: 11,
           },
           axisTick: {
             show: true,
@@ -125,44 +121,34 @@ const Chart: React.FC = () => {
       ],
       series: [
         {
-          name:'legend',
+          name: 'legend',
           type: 'bar',
           data: dataY,
           barWidth: '10',
-          itemStyle: {
-            normal: {
-              color: new echarts.graphic.LinearGradient(
-                0,
-                0,
-                0,
-                1,
-                [
-                  {
-                    offset: 0,
-                    color: 'rgba(5, 213, 255, 1)', // 0% 处的颜色
-                  },
-                  {
-                    offset: 0.98,
-                    color: 'rgba(5, 213, 255, 0)', // 100% 处的颜色
-                  },
-                ],
-                false,
-              ),
-              shadowColor: 'rgba(5, 213, 255, 1)',
-              shadowBlur: 4,
-            },
-          },
-          label: {
-            normal: {
-              show: true,
-              lineHeight: 10,
-              formatter: '{c}',
-              position: 'top',
-              textStyle: {
-                color: '#fff',
-                fontSize: 10,
+          color: new echarts.graphic.LinearGradient(
+            0,
+            0,
+            0,
+            1,
+            [
+              {
+                offset: 0,
+                color: 'rgba(5, 213, 255, 1)', // 0% 处的颜色
               },
-            },
+              {
+                offset: 0.98,
+                color: 'rgba(5, 213, 255, 0)', // 100% 处的颜色
+              },
+            ],
+            false,
+          ),
+          label: {
+            show: true,
+            lineHeight: 10,
+            formatter: '{c}',
+            position: 'top',
+            color: '#fff',
+            fontSize: 10,
           },
         },
       ],
