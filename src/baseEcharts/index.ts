@@ -5,6 +5,7 @@ import {
   BarSeriesOption,
   LineChart,
   LineSeriesOption,
+  PieChart,
 } from 'echarts/charts';
 import {
   TitleComponent,
@@ -49,6 +50,7 @@ echarts.use([
   CanvasRenderer,
   LineChart,
   SVGRenderer,
+  PieChart
 ]);
 
 const option: ECOption = {
