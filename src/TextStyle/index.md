@@ -5,6 +5,7 @@ nav:
 group:
   title: 基础知识
   path: /demo
+  order: 1
 order: 3
 ---
 
@@ -13,7 +14,6 @@ order: 3
 [http://www.imooc.com/wiki/echarts/textstyle.html](http://www.imooc.com/wiki/echarts/textstyle.html) [https://echarts.apache.org/zh/option.html#textStyle](https://echarts.apache.org/zh/option.html#textStyle) [https://echarts.apache.org/zh/option.html#title.textStyle](https://echarts.apache.org/zh/option.html#title.textStyle)
 
 在 ECharts 图表中除了核心的各式各样的图表，剩下的应该就是那些文本文字了，文字的描述也是直接关系到整个图表的意义，文字的样式有同样决定了图表的美观程度，优秀的图表类型选择加上合适的文本样式才能组成最漂亮的图表。这个小节我们就从各个方面去看一下如何对图表中的文本进行美化吧。
-
 
 ## 1. 简介
 

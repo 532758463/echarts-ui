@@ -20,23 +20,30 @@ import {
   DatasetComponentOption,
   // 内置数据转换器组件 (filter, sort)
   TransformComponent,
+  ToolboxComponent,
+  LegendComponent,
 } from 'echarts/components';
 import { LabelLayout, UniversalTransition } from 'echarts/features';
 import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
 import { XAXisOption, YAXisOption } from 'echarts/types/dist/shared';
-import { EChartsOption } from 'echarts/types/dist/shared';
+// import { EChartsOption } from 'echarts/types/dist/shared';
+
 // 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-// export type ECOption = echarts.ComposeOption<
-//   | BarSeriesOption
-//   | LineSeriesOption
-//   | TitleComponentOption
-//   | TooltipComponentOption
-//   | GridComponentOption
-//   | DatasetComponentOption
-//   | XAXisOption
-//   | YAXisOption
-// >;
-export type ECOption = EChartsOption;
+export type ECOption = echarts.ComposeOption<
+  | BarSeriesOption
+  | LineSeriesOption
+  | TitleComponentOption
+  | TooltipComponentOption
+  | GridComponentOption
+  | DatasetComponentOption
+  | XAXisOption
+  | YAXisOption
+  | TitleComponentOption
+  | TooltipComponentOption
+  | GridComponentOption
+  | LineSeriesOption
+>;
+// export type ECOption = EChartsOption;
 // 注册必须的组件
 echarts.use([
   TitleComponent,
@@ -50,7 +57,9 @@ echarts.use([
   CanvasRenderer,
   LineChart,
   SVGRenderer,
-  PieChart
+  PieChart,
+  ToolboxComponent,
+  LegendComponent,
 ]);
 
 const option: ECOption = {
