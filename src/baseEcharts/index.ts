@@ -6,6 +6,7 @@ import {
   LineChart,
   LineSeriesOption,
   PieChart,
+  PieSeriesOption,
 } from 'echarts/charts';
 import {
   TitleComponent,
@@ -45,6 +46,7 @@ export type ECOption = echarts.ComposeOption<
   | GridComponentOption
   | LineSeriesOption
   | DataZoomComponentOption
+  | PieSeriesOption
 >;
 // export type ECOption = EChartsOption;
 // 注册必须的组件
@@ -65,6 +67,5 @@ echarts.use([
   LegendComponent,
   DataZoomComponent,
 ]);
-
 
 export default echarts;
