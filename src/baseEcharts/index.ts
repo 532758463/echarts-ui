@@ -22,6 +22,8 @@ import {
   TransformComponent,
   ToolboxComponent,
   LegendComponent,
+  DataZoomComponent,
+  DataZoomComponentOption,
 } from 'echarts/components';
 import { LabelLayout, UniversalTransition } from 'echarts/features';
 import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
@@ -42,6 +44,7 @@ export type ECOption = echarts.ComposeOption<
   | TooltipComponentOption
   | GridComponentOption
   | LineSeriesOption
+  | DataZoomComponentOption
 >;
 // export type ECOption = EChartsOption;
 // 注册必须的组件
@@ -60,10 +63,8 @@ echarts.use([
   PieChart,
   ToolboxComponent,
   LegendComponent,
+  DataZoomComponent,
 ]);
 
-const option: ECOption = {
-  // ...
-};
 
 export default echarts;
