@@ -7,6 +7,8 @@ import {
   LineSeriesOption,
   PieChart,
   PieSeriesOption,
+  ScatterChart,
+  ScatterSeriesOption
 } from 'echarts/charts';
 import {
   TitleComponent,
@@ -25,6 +27,8 @@ import {
   LegendComponent,
   DataZoomComponent,
   DataZoomComponentOption,
+  PolarComponent,
+  PolarComponentOption,
 } from 'echarts/components';
 import { LabelLayout, UniversalTransition } from 'echarts/features';
 import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
@@ -47,6 +51,8 @@ export type ECOption = echarts.ComposeOption<
   | LineSeriesOption
   | DataZoomComponentOption
   | PieSeriesOption
+  | PolarComponentOption
+  | ScatterSeriesOption
 >;
 // export type ECOption = EChartsOption;
 // 注册必须的组件
@@ -66,6 +72,8 @@ echarts.use([
   ToolboxComponent,
   LegendComponent,
   DataZoomComponent,
+  PolarComponent,
+  ScatterChart
 ]);
 
 export default echarts;
