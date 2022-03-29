@@ -8,7 +8,9 @@ import {
   PieChart,
   PieSeriesOption,
   ScatterChart,
-  ScatterSeriesOption
+  ScatterSeriesOption,
+  MapSeriesOption,
+  MapChart,
 } from 'echarts/charts';
 import {
   TitleComponent,
@@ -24,11 +26,16 @@ import {
   // 内置数据转换器组件 (filter, sort)
   TransformComponent,
   ToolboxComponent,
+  ToolboxComponentOption,
   LegendComponent,
   DataZoomComponent,
   DataZoomComponentOption,
   PolarComponent,
   PolarComponentOption,
+  VisualMapComponent,
+  GeoComponent,
+  VisualMapComponentOption,
+  GeoComponentOption,
 } from 'echarts/components';
 import { LabelLayout, UniversalTransition } from 'echarts/features';
 import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
@@ -53,6 +60,10 @@ export type ECOption = echarts.ComposeOption<
   | PieSeriesOption
   | PolarComponentOption
   | ScatterSeriesOption
+  | VisualMapComponentOption
+  | GeoComponentOption
+  | ToolboxComponentOption
+  | MapSeriesOption
 >;
 // export type ECOption = EChartsOption;
 // 注册必须的组件
@@ -73,7 +84,10 @@ echarts.use([
   LegendComponent,
   DataZoomComponent,
   PolarComponent,
-  ScatterChart
+  ScatterChart,
+  VisualMapComponent,
+  GeoComponent,
+  MapChart,
 ]);
 
 export default echarts;
