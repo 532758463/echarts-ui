@@ -12,7 +12,7 @@ const Polar: React.FC = () => {
 
   const initChart = async () => {
     myChart.current = echarts.init(containerRef.current);
-    echarts.registerMap('USA', usaJson, {
+    echarts.registerMap('USA', usaJson as any, {
       Alaska: {
         left: -131,
         top: 25,
